@@ -258,14 +258,15 @@
 }
 
   /* Panel header */
-  .panel-header {
+.panel-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: clamp(0.7rem, 2vw, 1.1rem) clamp(1rem, 3vw, 1.8rem);
+    /* Ridotto il padding verticale: da 0.7rem/1.1rem a 0.3rem/0.6rem */
+    padding: clamp(0.3rem, 1.2vw, 0.6rem) clamp(1rem, 3vw, 1.8rem);
     border-bottom: 1px solid rgba(201,162,39,0.2);
     background: rgba(201,162,39,0.06);
-  }
+}
   .panel-logo {
     height: clamp(28px, 5vw, 40px);
     width: auto;
@@ -730,10 +731,17 @@
               <input class="form-input" type="date" id="fData">
             </div>
           </div>
-          <div class="form-group">
-            <label class="form-label">Codice voucher</label>
-            <input class="form-input" type="text" placeholder="MING-XXXX-XXXX" id="fCodice" style="letter-spacing:0.15em; text-transform:uppercase;">
-          </div>
+         <div class="form-group">
+  <label class="form-label">Codice voucher</label>
+  <input 
+    class="form-input" 
+    type="text" 
+    value="MING-10-PROMO-26" 
+    id="fCodice" 
+    style="letter-spacing:0.15em; text-transform:uppercase; background-color: rgba(255,255,255,0.05); cursor: default;" 
+    readonly
+  >
+</div>
           <button class="form-submit" onclick="submitForm()">Attiva il regalo →</button>
         </div>
         <div class="form-success" id="formSuccess">
