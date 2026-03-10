@@ -240,9 +240,10 @@
   .speed-line { height: 2.5px; background: linear-gradient(to left, rgba(255,255,255,0.6), transparent); border-radius: 2px; }
 
   /* ===== REVEAL PANEL (replaces reveal-cert) ===== */
-  .reveal-panel {
+.reveal-panel {
     position: absolute;
-    bottom: clamp(100px, 20vh, 175px);
+    /* Valori ridotti per avvicinarlo al bordo inferiore */
+    bottom: clamp(20px, 5vh, 60px); 
     left: 50%;
     transform: translateX(-50%) scale(0.85);
     width: min(94vw, 780px);
@@ -254,7 +255,7 @@
     border-radius: 8px;
     backdrop-filter: blur(8px);
     overflow: hidden;
-  }
+}
 
   /* Panel header */
   .panel-header {
