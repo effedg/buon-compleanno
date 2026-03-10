@@ -56,11 +56,15 @@
     position: relative;
     z-index: 1;
   }
-  .school-logo-img {
+.school-logo-img {
     height: clamp(42px, 9vw, 64px);
     width: auto;
     flex-shrink: 0;
-  }
+    
+    /* TRUCCO PER LA TRASPARENZA */
+    /* Se lo sfondo del logo è BIANCO e il logo è scuro, usa questo: */
+    mix-blend-mode: multiply;
+}
 
   .voucher-wrapper {
     position: relative;
